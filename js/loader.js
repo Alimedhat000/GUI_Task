@@ -5,7 +5,6 @@ export function loadComponent(dir, query) {
   return new Promise((resolve, reject) => {
     $.ajax({
       url: html_dir,
-      timeout: 5000,
       success: function (html) {
         $(query).html(html);
         const link = $(
@@ -18,8 +17,8 @@ export function loadComponent(dir, query) {
         }
         resolve();
       },
-      error: (jqXHR, status, error) => {
-        reject(new Error(`Failed to load ${dir}: ${error}`));
+      error: (__, _, error) => {
+        reject(new Error(`Failed to load ${query}: ${error}`));
       },
     });
   });
