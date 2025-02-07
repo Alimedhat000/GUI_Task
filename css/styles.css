@@ -26,6 +26,7 @@ body {
   padding: 20px;
 }
 #status-container {
+  padding-bottom: 50px;
   justify-content: space-between;
 }
 
