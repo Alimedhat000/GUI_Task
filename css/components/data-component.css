@@ -1,0 +1,28 @@
+.data-component h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.data-item {
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.data-item:hover {
+  transform: translateY(-2px);
+  background-color: #ffffff;
+}
+
+.data-item img {
+  width: 24px;
+  height: 24px;
+}
