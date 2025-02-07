@@ -3,21 +3,38 @@ $(document).ready(function () {
 });
 
 function atttachControlHandlers() {
-  $("#btn-up").on("click", function () {
-    moveUp();
-  });
+  $("#btn-up")
+    .on("mousedown", function () {
+      moveUp();
+    })
+    .on("mouseup mouseleave", function () {
+      stopMoving();
+    });
 
-  $("#btn-down").on("click", function () {
-    moveDown();
-  });
+  $("#btn-down")
+    .on("mousedown", function () {
+      moveDown();
+    })
+    .on("mouseup mouseleave", function () {
+      stopMoving();
+    });
 
-  $("#btn-left").on("click", function () {
-    moveLeft();
-  });
+  $("#btn-left")
+    .on("mousedown", function () {
+      moveLeft();
+    })
+    .on("mouseup mouseleave", function () {
+      stopMoving();
+    });
 
-  $("#btn-right").on("click", function () {
-    moveRight();
-  });
+  $("#btn-right")
+    .on("mousedown", function () {
+      moveRight();
+    })
+    .on("mouseup mouseleave", function () {
+      stopMoving();
+    });
+
   const KEY_CODES = {
     LEFT: 37,
     UP: 38,
@@ -25,25 +42,29 @@ function atttachControlHandlers() {
     DOWN: 40,
   };
 
-  $(document).on("keydown", function (e) {
-    switch (e.which) {
-      case KEY_CODES.LEFT:
-        moveLeft();
-        break;
-      case KEY_CODES.UP:
-        moveUp();
-        break;
-      case KEY_CODES.RIGHT:
-        moveRight();
-        break;
-      case KEY_CODES.DOWN:
-        moveDown();
-        break;
-      default:
-        return;
-    }
-    e.preventDefault();
-  });
+  $(document)
+    .on("keydown", function (e) {
+      switch (e.which) {
+        case KEY_CODES.LEFT:
+          moveLeft();
+          break;
+        case KEY_CODES.UP:
+          moveUp();
+          break;
+        case KEY_CODES.RIGHT:
+          moveRight();
+          break;
+        case KEY_CODES.DOWN:
+          moveDown();
+          break;
+        default:
+          return;
+      }
+      e.preventDefault();
+    })
+    .on("keyup", function () {
+      stopMoving();
+    });
 }
 
 function moveUp() {
@@ -64,4 +85,8 @@ function moveLeft() {
 function moveRight() {
   console.log("Moving right");
   $(".moving-status").text("Moving right");
+}
+
+function stopMoving() {
+  $(".moving-status").text("");
 }
