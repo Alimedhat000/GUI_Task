@@ -9,7 +9,7 @@ $(document).ready(function () {
                     <div class="emergency-popup-container">
                       <h2 class="emergency-popup-title">Emergency Stop!</h2>
                       <p>System has been stopped.</p>
-                      <button id="acknowledgeBtn">Acknowledge</button>
+                      <button id="acknowledgeBtn">Continue</button>
                     </div>
                 `);
 
