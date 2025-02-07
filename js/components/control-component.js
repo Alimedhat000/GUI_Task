@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  atttachControlHandlers();
+});
+
+function atttachControlHandlers() {
   $("#btn-up").on("click", function () {
     moveUp();
   });
@@ -40,20 +44,24 @@ $(document).ready(function () {
     }
     e.preventDefault();
   });
+}
 
-  function moveUp() {
-    console.log("Moving up");
-  }
+function moveUp() {
+  console.log("Moving up");
+  $(".moving-status").text("Moving up");
+}
 
-  function moveDown() {
-    console.log("Moving down");
-  }
+function moveDown() {
+  console.log("Moving down");
+  $(".moving-status").text("Moving down");
+}
 
-  function moveLeft() {
-    console.log("Moving left");
-  }
+function moveLeft() {
+  console.log("Moving left");
+  $(".moving-status").text("Moving left");
+}
 
-  function moveRight() {
-    console.log("Moving right");
-  }
-});
+function moveRight() {
+  console.log("Moving right");
+  $(".moving-status").text("Moving right");
+}
