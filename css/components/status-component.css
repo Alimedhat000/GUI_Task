@@ -40,7 +40,7 @@
   color: #444;
 }
 
-.control-btn {
+#toggleStatus {
   width: 100%;
   padding: 12px;
   border: none;
@@ -52,6 +52,10 @@
   transition: background-color 0.2s ease;
 }
 
-.control-btn:hover {
+#toggleStatus:hover {
   background: #0056b3;
+}
+
+.status-indicator.status-alert .status-dot {
+  background: #ffb02e;
 }

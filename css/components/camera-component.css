@@ -3,11 +3,15 @@
   background: #f5f5f5;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .camera-feed {
   position: relative;
-  width: 75%;
+  width: 80%;
   margin: 15px auto;
   background: #000;
   border-radius: 4px;
@@ -17,6 +21,22 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#toggleCamera {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#toggleStatus:hover {
+  background: #0056b3;
 }
 
 .camera-inactive {
@@ -34,11 +54,11 @@
 }
 
 .camera-feed.shutting-down .camera-image {
-  animation: shutdown 1s ease-in-out forwards;
+  animation: shutdown 0.3s ease-in-out forwards;
 }
 
 .camera-feed.starting-up .camera-image {
-  animation: startup 1s ease-in-out forwards;
+  animation: startup 0.6s ease-in-out forwards;
 }
 
 .camera-feed.shutting-down .camera-inactive {
