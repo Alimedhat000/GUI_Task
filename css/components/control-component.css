@@ -20,14 +20,26 @@
 }
 
 #btn-up {
+  padding: 30px 15px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 0 0 2px #1976d2;
   grid-area: 1 / 2 / 2 / 3;
 }
+
 #btn-down {
+  border-radius: 0 0 0 0;
+  box-shadow: 0 0 0 2px #1976d2;
   grid-area: 2 / 2 / 3 / 3;
 }
+
 #btn-left {
+  border-radius: 8px 0 0 8px;
+  box-shadow: 0 0 0 2px #1976d2;
   grid-area: 2 / 1 / 3 / 2;
 }
+
 #btn-right {
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 0 0 2px #1976d2;
   grid-area: 2 / 3 / 3 / 4;
 }
