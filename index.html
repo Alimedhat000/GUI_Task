@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="dashboard">
+
+        <div class="column" id="status-container">
+            <div class="component" id="status-component"></div>
+            <div class="component" id="controls-component"></div>
+        </div>
+
+        <div class="column" id="camera-container">
+            <div class="component" id="camera-component"></div>
+            <div class="component" id="emergency-component"></div>
+        </div>
+
+        <div class="column" id="data-container">
+            <div class="component" id="data-component"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>
